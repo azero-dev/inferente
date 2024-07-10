@@ -62,6 +62,8 @@ const GlobalStyles = createGlobalStyle`
 
   p {
     color: ${(props) => props.theme.textColor};
+    margin-bottom: 2rem;
+    line-height: 1.2;
   }
 
   h1 {
@@ -75,6 +77,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: ${(props) => props.theme.primaryColor};
     text-decoration: none;
+    cursor: pointer;
   }
 
   a:hover {

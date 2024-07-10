@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import profilePic from "../../assets/prof.png";
+import ButtonComponent from "../Button.jsx";
 
 const MainContainer = styled.div`
   display: flex;
@@ -7,12 +8,10 @@ const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 90vh;
-  padding: 2rem 20vw;
   column-gap: 10vw;
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
     flex-direction: column;
-    padding: 2rem 15vw;
   }
 `;
 
@@ -31,7 +30,7 @@ const Intro = styled.div`
   }
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
-    margin-top: 10vh;
+    ${'' /* margin-top: 10vh; */}
     
     & h1 {
       font-size: 3rem;
@@ -47,6 +46,7 @@ const ProfilePicture = styled.div`
 
   & img {
     width: 100%;
+    filter: brightness(76%);
     ${'' /* border-radius: 50%; */}
     ${"" /* border: 0.4rem solid ${(props) => props.theme.secondaryColor}; */}
     ${
@@ -55,19 +55,22 @@ const ProfilePicture = styled.div`
   }
 `;
 
-const ResumeButton = styled.a`
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  color: white;
-  background-color: ${(props) => props.theme.tertiaryColor};
-  border-radius: 0.25rem;
-  text-decoration: none;
-  transition: background-color 0.2s;
+// const ResumeButton = styled.a`
+//   display: inline-block;
+//   padding: 0.5rem 1rem;
+//   color: white;
+//   background-color: ${(props) => props.theme.tertiaryColor};
+//   border-radius: 0.25rem;
+//   text-decoration: none;
+//   transition: background-color 0.2s;
 
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
+//   &:hover {
+//     background-color: #0056b3;
+//   }
+// `;
+
+const handleClick = () => {
+}
 
 function Hello() {
   return (
@@ -79,9 +82,9 @@ function Hello() {
           Welcome to my portfolio. I&apos;m a web developer specialized in
           frontend and backend development for complex scalable web apps.
         </p>
-        <ResumeButton href="/resume.pdf" download>
+        <ButtonComponent onClick={handleClick}>
           Download My Resume
-        </ResumeButton>
+        </ButtonComponent>
       </Intro>
       <ProfilePicture>
         <img src={profilePic} alt="Fran Rodriguez" />

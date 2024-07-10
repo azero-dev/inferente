@@ -5,17 +5,21 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: grid;
+  grid-template-columns: 20vw 1fr 20vw;
+  grid-template-rows: 10vh 1fr 10vh;
   grid-template-areas:
-    "menu"
-    "body"
-    "footer";
-  min-height: 100vh;
+    "menu menu menu"
+    ". body ."
+    ". footer .";
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
+    grid-template-columns: 15vw 1fr 15vw;
+    grid-template-rows: 10vh 1fr 20vh 0px;
     grid-template-areas:
-      "body"
-      "footer"
-      "menu";
+      ". . ."
+      ". body ."
+      ". footer ."
+      "menu menu menu";
   }
 `;
 
@@ -33,17 +37,17 @@ const CustomFooter = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <Container>
-      <Menu>
-        <Header />
-      </Menu>
-      <Body>
-        {children}
-      </Body>
-      <CustomFooter>
-        <Footer />
-      </CustomFooter>
-    </Container>
+    <>
+      <Container>
+        <Menu>
+          <Header />
+        </Menu>
+        <Body>{children}</Body>
+        <CustomFooter>
+          <Footer />
+        </CustomFooter>
+      </Container>
+    </>
   );
 };
 

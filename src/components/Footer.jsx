@@ -11,7 +11,7 @@ const FooterContainer = styled.footer`
 const Footer = () => {
   return (
     <FooterContainer>
-      <p>Github</p>
+      <a>Github</a>
     </FooterContainer>
   );
 };

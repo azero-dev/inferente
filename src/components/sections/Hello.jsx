@@ -12,6 +12,7 @@ const MainContainer = styled.div`
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
     flex-direction: column;
+    margin-bottom: 10vh;
   }
 `;
 
@@ -20,6 +21,7 @@ const Intro = styled.div`
 
   & h1 {
     font-size: 4rem;
+    margin-bottom: 0;
   }
   & h2 {
     font-size: 2rem;

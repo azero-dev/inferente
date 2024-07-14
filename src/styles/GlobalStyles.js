@@ -63,26 +63,31 @@ const GlobalStyles = createGlobalStyle`
   p {
     color: ${(props) => props.theme.textColor};
     margin-bottom: 2rem;
-    line-height: 1.2;
+    line-height: 1.4;
+    font-size: 1.125em;
   }
 
   h1 {
     color: ${(props) => props.theme.primaryColor};
+    font-size: 3em;
+    margin-bottom: 2rem;
   }
 
   h2 {
     color: ${(props) => props.theme.secondaryColor};
+    font-size: 1.8em;
+    margin-bottom: 1rem;
   }
 
   a {
     color: ${(props) => props.theme.primaryColor};
     text-decoration: none;
     cursor: pointer;
+    transition: 0.18s;
   }
 
   a:hover {
     color: ${(props) => props.theme.secondaryColor};
-    transition: 0.18s;
   }
 `;
 

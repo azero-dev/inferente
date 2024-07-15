@@ -28,9 +28,6 @@ const GlobalStyles = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  body {
-    line-height: 1;
-  }
   ol, ul {
     list-style: none;
   }
@@ -54,6 +51,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     color: ${(props) => props.theme.textColor};
     box-sizing: border-box;
+    line-height: 1.4;
   }
 
   body {
@@ -63,7 +61,6 @@ const GlobalStyles = createGlobalStyle`
   p {
     color: ${(props) => props.theme.textColor};
     margin-bottom: 2rem;
-    line-height: 1.4;
     font-size: 1.125em;
   }
 
@@ -79,15 +76,20 @@ const GlobalStyles = createGlobalStyle`
     margin-bottom: 1rem;
   }
 
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+  }
+
   a {
     color: ${(props) => props.theme.primaryColor};
     text-decoration: none;
     cursor: pointer;
     transition: 0.18s;
-  }
 
-  a:hover {
-    color: ${(props) => props.theme.secondaryColor};
+    &:hover {
+      color: ${(props) => props.theme.secondaryColor};
+    }
   }
 `;
 

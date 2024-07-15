@@ -2,7 +2,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const SecCont = styled.div`
-  margin: 0 auto 8rem;
+  margin: 0 auto 12rem;
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
     margin: 2.2rem auto;

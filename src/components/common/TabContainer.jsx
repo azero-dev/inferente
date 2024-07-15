@@ -6,8 +6,8 @@ const TabCont = styled.div`
   grid-template-columns: 1fr 3fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
-                      "img title"
-                      "img text";
+    "img title"
+    "img text";
   column-gap: 2em;
 
   img {
@@ -25,8 +25,19 @@ const TabCont = styled.div`
   }
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 22vh auto auto;
+    grid-template-areas:
+      "img"
+      "title"
+      "text";
+
+    img {
+      max-height: 20vh;
+      margin: 1em auto;
+    }
   }
-`
+`;
 
 function TabContainer({ children }) {
   return (

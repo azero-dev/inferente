@@ -1,13 +1,13 @@
-import SectionContainer from "../../common/SectionContainer";
-import ReactTabsStyles from "../../common/ReactTabsStyles";
+import PropTypes from 'prop-types';
+import SectionContainer from "../common/SectionContainer";
+import ReactTabsStyles from "../common/ReactTabsStyles";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import TabContainer from "../../common/TabContainer";
-import projectsData from "../../../data/projectsData.js";
+import TabContainer from "../common/TabContainer";
 
-function Projects() {
+function Projects({ projectsData, sectionType }) {
   return (
     <SectionContainer>
-      <h1>Projects</h1>
+      {sectionType === 'New' ? <h1>Projects</h1> : <h1>Old Projects</h1>}
       <ReactTabsStyles>
         <Tabs>
           <TabList>
@@ -33,3 +33,8 @@ function Projects() {
 }
 
 export default Projects;
+
+Projects.propTypes = {
+  projectsData: [],
+  sectionType: PropTypes.string.isRequired,
+}

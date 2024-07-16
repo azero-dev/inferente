@@ -2,7 +2,7 @@ import styled from "styled-components";
 import SectionContainer from "../common/SectionContainer";
 import aboutData from "../../data/aboutData";
 
-const hoverEffect = `
+const hoverEffect = (props) => `
   border-radius: 10px;
   padding: 2em;
   transition: all 0.2s;
@@ -11,6 +11,11 @@ const hoverEffect = `
   &:hover {
     transform: scale(1.02);
     background-color: #0a0e1d;
+  }
+
+  @media (${props.theme.breakpoints.mobile}) {
+    justify-self: start;
+    padding: 1em 0;
   }
 `;
 
@@ -22,6 +27,16 @@ const AboutContainer = styled.div`
     "intro intro intro"
     "exp edu skills";
   justify-items: center;
+
+  @media (${(props) => props.theme.breakpoints.mobile}) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "intro"
+      "exp"
+      "edu"
+      "skills";
+  }
 `
 
 const AboutIntro = styled.div`
@@ -30,17 +45,17 @@ const AboutIntro = styled.div`
 
 const AboutExp = styled.div`
   grid-area: exp;
-  ${hoverEffect}
+  ${(props) => hoverEffect(props)}
 `
 
 const AboutEdu = styled.div`
   grid-area: edu;
-  ${hoverEffect}
+  ${(props) => hoverEffect(props)}
 `
 
 const AboutSkills = styled.div`
   grid-area: skills;
-  ${hoverEffect}
+  ${(props) => hoverEffect(props)}
 `
 
 

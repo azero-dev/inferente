@@ -13,14 +13,3 @@ const theme = {
 };
 
 export default theme;
-
-
-
-// const theme = {
-//   bodyBg: '#0d1224',
-//   textColor: '#427a97',
-//   primaryColor: '#7790be',
-//   secondaryColor: '#c46d6d',
-//   thirdColor: '#5fa262',
-//   textColor: '#6aabcc,
-// };

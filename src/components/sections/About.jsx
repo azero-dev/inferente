@@ -25,7 +25,8 @@ const subtitleStyle = {
   color: Theme.subColor,
 }
 
-const boldStyle = {
+const headlineStyles = {
+  marginTop: "1em",
   fontWeight: "bold"
 }
 
@@ -86,7 +87,7 @@ function About() {
                   <span style={subtitleStyle}>{exp}</span>
                 </li>
               ) : (
-                <li key={index} style={boldStyle}>{exp}</li>
+                <li key={index} style={headlineStyles}>{exp}</li>
               )
             )}
           </ul>
@@ -96,7 +97,7 @@ function About() {
           <ul>
             {aboutData.education.map((edu, index) =>
               typeof edu === "string" ? (
-                <li key={index} style={boldStyle}>{edu}</li>
+                <li key={index} style={headlineStyles}>{edu}</li>
               ) : (
                 <>
                   <li key={`${index}_0`} style={subtitleStyle}>{edu[0]}</li>

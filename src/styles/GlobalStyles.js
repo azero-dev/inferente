@@ -91,6 +91,12 @@ const GlobalStyles = createGlobalStyle`
       color: ${(props) => props.theme.secondaryColor};
     }
   }
+
+  @media (${(props) => props.theme.breakpoints.mobile}) {
+    p {
+      font-size: 1.2em;
+    }
+  }
 `;
 
 export default GlobalStyles;

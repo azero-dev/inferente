@@ -7,7 +7,7 @@ import TabContainer from "../common/TabContainer";
 function Projects({ projectsData, sectionType }) {
   return (
     <SectionContainer>
-      {sectionType === 'New' ? <h1 id="projects">Projects</h1> : <h1 id="oldProjects">Old Projects</h1>}
+      {sectionType === 'New' ? <h1 id="projects">Projects</h1> : <h1 id="oldProjects">Old or discontinued projects</h1>}
       <ReactTabsStyles>
         <Tabs>
           <TabList>

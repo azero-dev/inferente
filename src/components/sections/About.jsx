@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import Theme from "../../styles/Theme"
 import SectionContainer from "../common/SectionContainer";
 import aboutData from "../../data/aboutData";
 
+// CSS rules
 const hoverEffect = (props) => `
   border-radius: 10px;
   padding: 2em;
@@ -10,7 +12,7 @@ const hoverEffect = (props) => `
   
   &:hover {
     transform: scale(1.02);
-    background-color: #0a0e1d;
+    background-color: ${props.theme.backgroundDarker};
   }
 
   @media (${props.theme.breakpoints.mobile}) {
@@ -19,6 +21,15 @@ const hoverEffect = (props) => `
   }
 `;
 
+const subtitleStyle = {
+  color: Theme.subColor,
+}
+
+const boldStyle = {
+  fontWeight: "bold"
+}
+
+// Styled components
 const AboutContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -37,28 +48,26 @@ const AboutContainer = styled.div`
       "edu"
       "skills";
   }
-`
+`;
 
 const AboutIntro = styled.div`
   grid-area: intro;
-`
+`;
 
 const AboutExp = styled.div`
   grid-area: exp;
   ${(props) => hoverEffect(props)}
-`
+`;
 
 const AboutEdu = styled.div`
   grid-area: edu;
   ${(props) => hoverEffect(props)}
-`
+`;
 
 const AboutSkills = styled.div`
   grid-area: skills;
   ${(props) => hoverEffect(props)}
-`
-
-
+`;
 
 function About() {
   return (
@@ -71,17 +80,30 @@ function About() {
         <AboutExp>
           <h3>Experience</h3>
           <ul>
-            {aboutData.experience.map((exp, index) => (
-              <li key={index}>{exp}</li>
-            ))}
+            {aboutData.experience.map((exp, index) =>
+              index % 2 !== 0 ? (
+                <li key={index}>
+                  <span style={subtitleStyle}>{exp}</span>
+                </li>
+              ) : (
+                <li key={index} style={boldStyle}>{exp}</li>
+              )
+            )}
           </ul>
         </AboutExp>
         <AboutEdu>
           <h3>Education</h3>
           <ul>
-            {aboutData.education.map((edu, index) => (
-              <li key={index}>{edu}</li>
-            ))}
+            {aboutData.education.map((edu, index) =>
+              typeof edu === "string" ? (
+                <li key={index} style={boldStyle}>{edu}</li>
+              ) : (
+                <>
+                  <li key={`${index}_0`} style={subtitleStyle}>{edu[0]}</li>
+                  <li key={`${index}_1`} style={subtitleStyle}>{edu[1]}</li>
+                </>
+              )
+            )}
           </ul>
         </AboutEdu>
         <AboutSkills>

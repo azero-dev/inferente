@@ -1,8 +1,11 @@
 const aboutData = {
-  intro: 'This is just a little bit about me. I am a software engineer with a passion for web development. I have experience with React, Node.js, and Express.js. I am always looking to learn new things and improve my skills.',
-  experience: ['experience 1', 'experience 2', 'experience 3'],
-  education: ['education 1', 'education 2', 'education 3'],
-  skills: ['skill 1', 'skill 2', 'skill 3']
+  intro: "From a young age I've been interested in tinkering with computers, gradually immersing myself in the world of technology. In 2015, I began working as a front-end developer as a side job, and this passion has only grown stronger over the years, no matter whether it is in the field of hardware, programming or operating systems ('I use arch, btw'). Today, I am pursuing studies in Computing and IT, with the inevitable desire to keep learning about this world that seems vast.",
+  
+  experience: ['Freelance Font-end Developer', '2016-Present', 'Sekkend', '2015-2016'],
+  
+  education: ['BSc (Honours) Computing and IT (Networking & Software)', ['The Open University', '2023-Present'], 'Cisco Networking Essentials', ['Cisco Networking Academy', '2023'] ],
+  
+  skills: ['Linux', 'Windows', 'JavaScript', 'React.js', 'Next.js', 'Git', 'Databases', 'Networks', 'Docker', 'Virtual Private Servers', 'Single-Board Computers', 'Bash Scripting', 'Hardware']
 }
 
 export default aboutData

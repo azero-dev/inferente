@@ -13,7 +13,7 @@ const Container = styled.div`
     ". footer .";
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
-    grid-template-columns: 15vw 1fr 15vw;
+    grid-template-columns: 15vw 70vw 15vw;
     grid-template-rows: 10vh 1fr 20vh 0px;
     grid-template-areas:
       ". . ."

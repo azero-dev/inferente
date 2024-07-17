@@ -77,6 +77,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
+    color: ${(props) => props.theme.secondaryColor};
     font-size: 1.5em;
     margin-bottom: 1rem;
   }

@@ -4,24 +4,30 @@ import PropTypes from "prop-types";
 const TabCont = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 100% 1fr;
   grid-template-areas:
     "img title"
-    "img text";
+    "img text"
+    "img button";
   column-gap: 2em;
 
   img {
     grid-area: img;
     max-width: 100%;
   }
-
   h2 {
     grid-area: title;
     margin-top: 1em;
   }
-
   p {
     grid-area: text;
+  }
+
+  .buttons {
+    grid-area: button;
+    button {
+      margin: 0 1em 0 0;
+    }
   }
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
@@ -30,21 +36,28 @@ const TabCont = styled.div`
     grid-template-areas:
       "img"
       "title"
-      "text";
+      "text"
+      "button";
 
     img {
       max-height: 20vh;
       margin: 1em auto;
     }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      button {
+        margin: 0;
+      }
+    }
   }
 `;
 
 function TabContainer({ children }) {
-  return (
-    <TabCont>
-      {children}
-    </TabCont>
-  )
+  return <TabCont>{children}</TabCont>;
 }
 
 export default TabContainer;

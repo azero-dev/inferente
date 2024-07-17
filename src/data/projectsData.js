@@ -3,35 +3,13 @@ import phone from '../assets/Phone.webp'
 const projectsData = [
   {
     id: 1,
-    title: "Any title 1",
-    description:
-      "aLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat nulla ac lectus tristique, vel mattis risus tempor. Etiam rutrum purus ac blandit iaculis. Donec sit amet arcu ac turpis facilisis sagittis. Integer vehicula nibh vel libero cursus, in lobortis nunc varius. Integer congue arcu libero, et aliquet arcu semper et. Morbi cursus ex eu libero facilisis rhoncus. Suspendisse potenti.",
+    title: "Word quiz",
+    description: "A simple word quiz game that uses a dictionary API to fetch words and their definitions. The game is built with React and styled with CSS.",
     img: phone,
-    imgAlt: "phone",
+    imgAlt: "Word quiz example",
+    demoURL: "https://word-quiz-blue.vercel.app/",
+    sourceURL: "https://github.com/azero-dev/word-quiz",
   },
-  {
-    id: 2,
-    title: "Any title 2",
-    description:
-      "bLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat nulla ac lectus tristique, vel mattis risus tempor. Etiam rutrum purus ac blandit iaculis. Donec sit amet arcu ac turpis facilisis sagittis. Integer vehicula nibh vel libero cursus, in lobortis nunc varius. Integer congue arcu libero, et aliquet arcu semper et. Morbi cursus ex eu libero facilisis rhoncus. Suspendisse potenti.",
-    img: phone,
-    imgAlt: "phone",
-  },
-  {
-    id: 3,
-    title: "Any title 3",
-    description:
-      "cLorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consequat nulla ac lectus tristique, vel mattis risus tempor. Etiam rutrum purus ac blandit iaculis. Donec sit amet arcu ac turpis facilisis sagittis. Integer vehicula nibh vel libero cursus, in lobortis nunc varius. Integer congue arcu libero, et aliquet arcu semper et. Morbi cursus ex eu libero facilisis rhoncus. Suspendisse potenti.",
-    img: phone,
-    imgAlt: "phone",
-  },
-  {
-    id: 4,
-    title: "algo!",
-    description: "algo mas",
-    img: phone,
-    imgAlt: "phone",
-  }
 ]
 
 export default projectsData

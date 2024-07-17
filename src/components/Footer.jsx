@@ -1,18 +1,16 @@
-import React from 'react';
 import styled from 'styled-components';
+import Theme from '../styles/Theme';
+
+const footerColor = Theme.bodyBg;
 
 const FooterContainer = styled.footer`
-  background-color: ${(props) => props.theme.bodyBg};
-  padding: 10px;
-  text-align: center;
-  margin-top: auto;
+  min-height: 30vh;
+  background: linear-gradient(to bottom, ${footerColor}, #000000);
 `;
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      <a>Github</a>
-    </FooterContainer>
+    <FooterContainer />
   );
 };
 

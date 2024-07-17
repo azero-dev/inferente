@@ -10,7 +10,7 @@ const Container = styled.div`
   grid-template-areas:
     "menu menu menu"
     ". body ."
-    ". footer .";
+    "footer footer footer";
 
   @media (${(props) => props.theme.breakpoints.mobile}) {
     grid-template-columns: 15vw 70vw 15vw;
@@ -18,7 +18,7 @@ const Container = styled.div`
     grid-template-areas:
       ". . ."
       ". body ."
-      ". footer ."
+      "footer footer footer"
       "menu menu menu";
   }
 `;

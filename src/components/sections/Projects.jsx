@@ -27,8 +27,8 @@ function Projects({ projectsData, sectionType }) {
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>
                 <div className='buttons'>
-                  <Button href={project.demoURL}>Demo</Button>
-                  <Button href={project.sourceURL}>Source code</Button>
+                  {project.demoURL && <Button href={project.demoURL}>Demo</Button>}
+                  {project.sourceURL && <Button href={project.sourceURL}>Source code</Button>}
                 </div>
               </TabContainer>
             </TabPanel>

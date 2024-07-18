@@ -14,6 +14,8 @@ const TabCont = styled.div`
   img {
     grid-area: img;
     max-width: 100%;
+    min-height: 60vh;
+    margin-top: 1em;
   }
   h2 {
     grid-area: title;
@@ -40,6 +42,7 @@ const TabCont = styled.div`
       "button";
 
     img {
+      min-height: 19vh;
       max-height: 20vh;
       margin: 1em auto;
     }

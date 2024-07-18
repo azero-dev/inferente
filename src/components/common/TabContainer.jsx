@@ -25,7 +25,7 @@ const TabCont = styled.div`
 
   .buttons {
     grid-area: button;
-    button {
+    a {
       margin: 0 1em 0 0;
     }
   }
@@ -49,7 +49,7 @@ const TabCont = styled.div`
       justify-content: center;
       align-items: center;
       gap: 1em;
-      button {
+      a {
         margin: 0;
       }
     }

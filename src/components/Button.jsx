@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StyledButton = styled.button`
+const buttonStyles = css`
   padding: 0.6em 1em;
   font-size: 1em;
   font-weight: bold;
@@ -18,13 +18,22 @@ const StyledButton = styled.button`
   }
 `;
 
+const StyledButton = styled.button`${buttonStyles}`;
+const StyledLink = styled.a`${buttonStyles}`;
+
 const Button = ({ children, onClick, href }) => {
   const handleClick = (e) => {
-    if (onClick) onClick(e);
-    if (href) window.location.href = href;
+    if (onClick) {
+      e.preventDefault();
+      onClick(e);
+    }
   };
 
-  return <StyledButton onClick={handleClick}>{children}</StyledButton>;
+  if (href) {
+    return <StyledLink href={href} onClick={handleClick}>{children}</StyledLink>;
+  } else {
+    return <StyledButton onClick={handleClick}>{children}</StyledButton>;
+  }
 };
 
 export default Button;

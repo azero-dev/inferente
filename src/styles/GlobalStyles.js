@@ -87,10 +87,9 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     cursor: pointer;
     transition: 0.18s;
-
-    &:hover {
+    ${'' /* &:hover {
       color: ${(props) => props.theme.secondaryColor};
-    }
+    } */}
   }
 
   @media (${(props) => props.theme.breakpoints.mobile}) {

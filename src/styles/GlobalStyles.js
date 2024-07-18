@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     color: ${(props) => props.theme.textColor};
     box-sizing: border-box;
-    line-height: 1.4;
+    line-height: 1;
   }
 
   body {
@@ -62,6 +62,7 @@ const GlobalStyles = createGlobalStyle`
     color: ${(props) => props.theme.textColor};
     margin-bottom: 2rem;
     font-size: 1.125em;
+    line-height: 1.4;
   }
 
   h1 {

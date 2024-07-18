@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import profilePic from "../../assets/prof.png";
+import profilePic from "../../assets/prof.webp";
 import ButtonComponent from "../Button.jsx";
+import CV from "../../assets/CV.pdf";
 
 const MainContainer = styled.div`
   display: flex;
@@ -46,31 +47,9 @@ const ProfilePicture = styled.div`
 
   & img {
     width: 100%;
-    filter: brightness(76%);
-    ${'' /* border-radius: 50%; */}
-    ${"" /* border: 0.4rem solid ${(props) => props.theme.secondaryColor}; */}
-    ${
-      "" /* box-shadow: 0px 0px 30px 0px ${(props) => props.theme.primaryColor}; */
-    }
+    filter: brightness(82%);
   }
 `;
-
-// const ResumeButton = styled.a`
-//   display: inline-block;
-//   padding: 0.5rem 1rem;
-//   color: white;
-//   background-color: ${(props) => props.theme.tertiaryColor};
-//   border-radius: 0.25rem;
-//   text-decoration: none;
-//   transition: background-color 0.2s;
-
-//   &:hover {
-//     background-color: #0056b3;
-//   }
-// `;
-
-const handleClick = () => {
-}
 
 function Hello() {
   return (
@@ -79,11 +58,10 @@ function Hello() {
         <h1>Fran Rodriguez</h1>
         <h2>Web Developer</h2>
         <p>
-          Welcome to my portfolio. I&apos;m a web developer specialized in
-          frontend and backend development for complex scalable web apps.
+          Front-end developer with experience in React. Skilled in creating dynamic and engaging web applications. Computer and hardware geek. Based in London.
         </p>
-        <ButtonComponent onClick={handleClick}>
-          Download My Resume
+        <ButtonComponent href={CV}>
+          Download CV
         </ButtonComponent>
       </Intro>
       <ProfilePicture>

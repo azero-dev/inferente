@@ -93,8 +93,17 @@ const GlobalStyles = createGlobalStyle`
     } */}
   }
 
+  li {
+    font-size: 1.125em;
+    line-height: 1.4;
+  }
+
   @media (${(props) => props.theme.breakpoints.mobile}) {
     p {
+      font-size: 1.2em;
+    }
+
+    li {
       font-size: 1.2em;
     }
   }

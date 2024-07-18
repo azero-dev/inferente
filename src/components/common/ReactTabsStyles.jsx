@@ -38,16 +38,6 @@ const TabsStyles = styled.div`
     outline: none;
   }
 
-  .react-tabs__tab:focus:after {
-    content: "";
-    position: absolute;
-    height: 4px;
-    left: 0;
-    right: 0;
-    bottom: -4px;
-    background: ${(props) => props.theme.tertiaryColor};
-  }
-
   .react-tabs__tab-panel {
     display: none;
   }
@@ -63,11 +53,6 @@ const TabsStyles = styled.div`
     
     .react-tabs__tab {
       margin: 1px;
-    }
-
-    .react-tabs__tab:focus:after {
-      height: 0;
-      bottom: 0;
     }
   }
 `;

@@ -4,7 +4,7 @@ import SectionContainer from "../common/SectionContainer";
 import aboutData from "../../data/aboutData";
 
 // CSS rules
-const hoverEffect = (props) => `
+const sharedStyles = (props) => `
   border-radius: 10px;
   padding: 2em;
   transition: all 0.2s;
@@ -17,7 +17,11 @@ const hoverEffect = (props) => `
 
   @media (${props.theme.breakpoints.mobile}) {
     justify-self: start;
-    padding: 1em 0;
+    padding: 1.5em 0;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 `;
 
@@ -26,7 +30,7 @@ const subtitleStyle = {
 }
 
 const headlineStyles = {
-  marginTop: "1em",
+  marginTop: ".5em",
   fontWeight: "bold"
 }
 
@@ -57,17 +61,17 @@ const AboutIntro = styled.div`
 
 const AboutExp = styled.div`
   grid-area: exp;
-  ${(props) => hoverEffect(props)}
+  ${(props) => sharedStyles(props)}
 `;
 
 const AboutEdu = styled.div`
   grid-area: edu;
-  ${(props) => hoverEffect(props)}
+  ${(props) => sharedStyles(props)}
 `;
 
 const AboutSkills = styled.div`
   grid-area: skills;
-  ${(props) => hoverEffect(props)}
+  ${(props) => sharedStyles(props)}
 `;
 
 function About() {

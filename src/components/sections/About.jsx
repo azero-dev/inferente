@@ -1,10 +1,20 @@
-import styled from "styled-components";
+import React from "react";
+import styled, { css } from "styled-components";
 import Theme from "../../styles/Theme"
 import SectionContainer from "../common/SectionContainer";
 import aboutData from "../../data/aboutData";
 
-// CSS rules
-const sharedStyles = (props) => `
+// CSS rules and shared styles
+const subtitleStyle = {
+  color: Theme.subColor,
+}
+
+const headlineStyles = {
+  marginTop: ".5em",
+  fontWeight: "bold"
+}
+
+const sharedStyles = (props) => css`
   border-radius: 10px;
   padding: 2em;
   transition: all 0.2s;
@@ -24,15 +34,6 @@ const sharedStyles = (props) => `
     }
   }
 `;
-
-const subtitleStyle = {
-  color: Theme.subColor,
-}
-
-const headlineStyles = {
-  marginTop: ".5em",
-  fontWeight: "bold"
-}
 
 // Styled components
 const AboutContainer = styled.div`
@@ -61,17 +62,17 @@ const AboutIntro = styled.div`
 
 const AboutExp = styled.div`
   grid-area: exp;
-  ${(props) => sharedStyles(props)}
+  ${sharedStyles}
 `;
 
 const AboutEdu = styled.div`
   grid-area: edu;
-  ${(props) => sharedStyles(props)}
+  ${sharedStyles}
 `;
 
 const AboutSkills = styled.div`
   grid-area: skills;
-  ${(props) => sharedStyles(props)}
+  ${sharedStyles}
 `;
 
 function About() {
@@ -103,10 +104,10 @@ function About() {
               typeof edu === "string" ? (
                 <li key={index} style={headlineStyles}>{edu}</li>
               ) : (
-                <>
+                <React.Fragment key={`${index}`} >
                   <li key={`${index}_0`} style={subtitleStyle}>{edu[0]}</li>
                   <li key={`${index}_1`} style={subtitleStyle}>{edu[1]}</li>
-                </>
+                </React.Fragment>
               )
             )}
           </ul>

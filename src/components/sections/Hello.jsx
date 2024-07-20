@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import profilePic from "../../assets/prof.webp";
 import ButtonComponent from "../Button.jsx";
-import CV from "../../assets/CV.pdf";
+import cv from "../../assets/CV.pdf";
 
 const MainContainer = styled.div`
   display: flex;
@@ -19,6 +19,8 @@ const MainContainer = styled.div`
 
 const Intro = styled.div`
   flex: 6;
+  display: flex;
+  flex-direction: column;
 
   & h1 {
     font-size: 4rem;
@@ -30,6 +32,9 @@ const Intro = styled.div`
   }
   & p {
     font-size: 1.3rem;
+  }
+  & a {
+    align-self: flex-start;
   }
 
   @media (${(props) => props.theme.breakpoints.mobile}) {    
@@ -60,7 +65,7 @@ function Hello() {
         <p>
           Front-end developer with experience in React. Skilled in creating dynamic and engaging web applications. Computer and hardware geek. Based in London.
         </p>
-        <ButtonComponent href={CV}>
+        <ButtonComponent href={cv}>
           Download CV
         </ButtonComponent>
       </Intro>

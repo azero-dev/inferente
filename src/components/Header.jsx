@@ -115,6 +115,7 @@ const Header = () => {
           <a href="#projects" onClick={handleClick}>Projects</a>
           <a href="#about" onClick={handleClick}>About</a>
           <a href="#contact" onClick={handleClick}>Contact</a>
+          <a href="https://blog.inferente.com/" onClick={handleClick}>Blog</a>
         </nav>
       </MobileHeaderContainer>
     </>
@@ -124,6 +125,7 @@ const Header = () => {
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="https://blog.inferente.com/">Blog</a>
       </nav>
     </DesktopHeaderContainer>
   );
